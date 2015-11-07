@@ -21,7 +21,7 @@ module.exports = function (done) {
     );
   }
 
-  function control (paths, conf) {
+  function lint (paths, conf) {
     return function (done) {
       gulp.src(paths)
         .pipe(jshint(conf))
@@ -37,9 +37,9 @@ module.exports = function (done) {
   }
 
   async.series([
-    control(['client/**/*.js', '!client/bower_components/**'], getConfig('./client/.jshintrc')),
-    control(['server/**/*.js'], getConfig('./server/.jshintrc')),
-    control(['gulpfile.js', 'tasks/**/*.js'], getConfig('./server/.jshintrc'))
+    lint(['client/**/*.js', '!client/bower_components/**'], getConfig('./client/.jshintrc')),
+    lint(['server/**/*.js'], getConfig('./server/.jshintrc')),
+    lint(['gulpfile.js', 'tasks/**/*.js'], getConfig('./server/.jshintrc'))
   ], done);
 
 };
