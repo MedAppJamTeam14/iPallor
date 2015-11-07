@@ -21,4 +21,28 @@ angular.module('ipallor', [
     $rootScope.toggleSidenav = function (menuId) {
       $mdSidenav(menuId).toggle();
     };
+
+    $rootScope.loggedInMenuItems = [
+      {
+        link : '/',
+        title: 'Home',
+        icon: 'dashboard'
+      },
+      {
+        link : '/upload',
+        title: 'Upload image',
+        icon: 'dashboard'
+      },
+      {
+        link : '/clinician',
+        title: 'clinican',
+        icon: 'group'
+      },
+      {
+        link : '/wolfram',
+        title: 'Wolfram API request/response',
+        icon: 'message'
+      }
+    ];
+
   });

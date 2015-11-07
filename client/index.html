@@ -14,6 +14,7 @@
     <meta name='og:type'               content='website'>
 
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <link href='http://fonts.googleapis.com/css?family=RobotoDraft' rel='stylesheet' type='text/css'>
     <base href="/">
 
     <!-- build:css app.css -->
@@ -27,16 +28,46 @@
     <!-- endbuild -->
 
   </head>
-  <body layout="column">
-    <topbar></topbar>
+  <body layout="row">
+    <md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
+      <md-toolbar class="md-tall md-hue-2">
+        <span flex></span>
+        <div layout="column" class="md-toolbar-tools-bottom inset">
+          <div>Firstname Lastname</div>
+          <div>email@domainname.com</div>
+        </div>
+      </md-toolbar>
+      <md-list>
+        <md-item ng-repeat="item in loggedInMenuItems">
+        <a href="{{item.link}}">
+          <md-item-content md-ink-ripple layout="row" layout-align="start center">
+            <div class="inset">
+              <ng-md-icon icon="{{item.icon}}"></ng-md-icon>
+            </div>
+            <div class="inset">{{item.title}}
+            </div>
+          </md-item-content>
+        </a>
+      </md-item>
+      </md-list>
+    </md-sidenav>
 
-    <div layout="row" flex>
-      <sidenav></sidenav>
-      <div layout="column" id="content" flex>
-        <md-content layout="column" class="md-padding" flex>
-          <div ng-view></div>
-        </md-content>
-      </div>
+
+    <div layout="column" class="relative" layout-fill role="main">
+      <md-toolbar>
+        <div class="md-toolbar-tools">
+          <md-button ng-click="toggleSidenav('left')" hide-gt-md class="md-icon-button">
+            <md-icon aria-label="Menu" md-svg-icon="assets/images/menu.svg">
+            </md-icon>
+          </md-button>
+          <h3>iPallor</h3>
+        </div>
+      </md-toolbar>
+      <md-content flex md-scroll-y>
+        <md-card flex-gt-sm="90" flex-gt-md="80">
+          <ng-view></ng-view>
+        </md-card>
+      </md-content>
     </div>
 
     <!-- build:js app.js -->
@@ -52,6 +83,10 @@
 
     <!-- inject:js -->
     <script src="app.js"></script>
+    <script src="views/upload/upload.js"></script>
+    <script src="views/upload/upload.controller.js"></script>
+    <script src="views/wolfram/wolfram.js"></script>
+    <script src="views/wolfram/wolfram.controller.js"></script>
     <script src="views/home/home.js"></script>
     <script src="views/home/home.controller.js"></script>
     <script src="views/clinician/clinician.js"></script>

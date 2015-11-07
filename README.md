@@ -8,7 +8,7 @@
 4. `cd iPallor`
 5. `npm install -g bower gulp`
 6. `bower install && npm install`
-7. Run `gulp`
+7. Run `gulp` to start server
 
 ## Commands
 * `gulp` - run gulp and start server

@@ -6,7 +6,16 @@ angular.module('ipallor')
     var vm = this;
 
     angular.extend(vm, {
-      name: 'HomeCtrl'
+      name: 'HomeCtrl',
+
+      activity: [
+        'Van Nguyen',
+        'Max Paulus',
+        'John Collins',
+        'Matin Khoshnevis',
+        'Pasha Khosravi',
+        'Lewis Liu'
+      ]
     });
 
   });
