@@ -16,7 +16,7 @@ angular.module('ipallor', [
     $locationProvider.html5Mode(true);
 
   })
-  .run(function ($rootScope, $mdSidenav) {
+  .run(function ($rootScope, $location, $mdSidenav) {
 
     $rootScope.toggleSidenav = function (menuId) {
       $mdSidenav(menuId).toggle();
@@ -44,5 +44,16 @@ angular.module('ipallor', [
         icon: 'message'
       }
     ];
+
+    $rootScope.login = function() {
+      $location.path('/');
+    };
+
+    $rootScope.logout = function() {
+      $rootScope.user = {};
+      $location.path('/');
+    };
+
+    $rootScope.user = {};
 
   });
