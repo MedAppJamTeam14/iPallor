@@ -6,12 +6,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport"              content="width=device-width, initial-scale=1">
-    <meta name="description"           content="static portfolio">
-    <meta name="author"                content="Van Nguyen">
-    <meta name='og:title'              content='Van personal website'>
-    <meta name='og:description'        content="Van personal website">
-    <meta name='og:site_name'          content='Van Nguyen'>
-    <meta name='og:type'               content='website'>
+    <meta name="description"           content="Angular app to aid in eye atrophy diagnosis">
+    <meta name='og:title'              content='iPallor'>
+    <meta name='og:description'        content="Angular app to aid in eye atrophy diagnosis">
+    <meta name='og:site_name'          content='iPallor'>
+    <meta name='og:type'               content='webapp'>
 
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
     <link href='http://fonts.googleapis.com/css?family=RobotoDraft' rel='stylesheet' type='text/css'>
@@ -41,20 +40,13 @@
         </div>
       </md-toolbar>
       <md-list>
-        <md-item ng-repeat="item in loggedInMenuItems">
-        <a href="{{item.link}}">
-          <md-item-content md-ink-ripple layout="row" layout-align="start center">
-            <div class="inset">
-              <ng-md-icon icon="{{item.icon}}"></ng-md-icon>
-            </div>
-            <div class="inset">{{item.title}}
-            </div>
-          </md-item-content>
-        </a>
-      </md-item>
+        <md-item ng-repeat="item in loggedInMenuItems" layout="row">
+          <md-button ng-click="navigate(item.link)">
+            {{ item.title }}
+          </md-button>
+        </md-item>
       </md-list>
     </md-sidenav>
-
 
     <div layout="column" class="relative main-content" layout-fill role="main">
       <md-toolbar>
@@ -65,11 +57,11 @@
           </md-button>
           <h3>iPallor</h3>
           <span flex></span>
-          <md-button class="md-icon-button" ng-if="!user.name" ng-click="login()" aria-label="Login">
+          <md-button ng-if="!user.name" ng-click="login()" aria-label="Login">
             Login
           </md-button>
-          <md-button class="md-icon-button" ng-if="user.name" ng-click="logout()" aria-label="Logout">
-            Logoutdfdfdfdf
+          <md-button ng-if="user.name" ng-click="logout()" aria-label="Logout">
+            Logout
           </md-button>
         </div>
       </md-toolbar>

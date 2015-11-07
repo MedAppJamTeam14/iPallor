@@ -45,6 +45,14 @@ angular.module('ipallor', [
       }
     ];
 
+    $rootScope.navigate = function(link) {
+      $location.path(link);
+
+      if ($mdSidenav('left').isOpen()) {
+        $rootScope.toggleSidenav('left');
+      }
+    };
+
     $rootScope.login = function() {
       $location.path('/');
     };
