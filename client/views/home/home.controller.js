@@ -35,7 +35,7 @@ angular.module('ipallor')
         }
       ],
 
-      login: function(user) {
+      login: function (user) {
         $rootScope.user = user;
         $location.path('/upload');
       }

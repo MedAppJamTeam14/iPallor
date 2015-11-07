@@ -24,28 +24,28 @@ angular.module('ipallor', [
 
     $rootScope.loggedInMenuItems = [
       {
-        link : '/',
+        link: '/',
         title: 'Home',
         icon: 'dashboard'
       },
       {
-        link : '/upload',
+        link: '/upload',
         title: 'Upload image',
         icon: 'dashboard'
       },
       {
-        link : '/clinician',
+        link: '/clinician',
         title: 'clinican',
         icon: 'group'
       },
       {
-        link : '/wolfram',
+        link: '/wolfram',
         title: 'Wolfram API request/response',
         icon: 'message'
       }
     ];
 
-    $rootScope.navigate = function(link) {
+    $rootScope.navigate = function (link) {
       $location.path(link);
 
       if ($mdSidenav('left').isOpen()) {
@@ -53,11 +53,11 @@ angular.module('ipallor', [
       }
     };
 
-    $rootScope.login = function() {
+    $rootScope.login = function () {
       $location.path('/');
     };
 
-    $rootScope.logout = function() {
+    $rootScope.logout = function () {
       $rootScope.user = {};
       $location.path('/');
     };
