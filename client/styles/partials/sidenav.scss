@@ -1,9 +1,11 @@
-.md-toolbar-tools-bottom div {
-  font-size: em(14);
+.md-toolbar-tools-bottom {
+  text-align: right;
+  margin-right: 10px;
+  font-size: em(16);
 
-  &:last-child {
-    font-size: em(12);
-    opacity: 0.8;
+  div:last-child {
+      font-size: em(12);
+      opacity: 0.8;
   }
 }
 
