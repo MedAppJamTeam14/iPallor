@@ -1,12 +1,10 @@
+<h2>Login</h2>
 
-  <h2>Login</h2>
-
-  <md-list>
-
-    <md-item ng-repeat="item in vm.activity">
-      <md-item-content>
-        <h4>{{ item }}</h4>
-      </md-item-content>
-      <md-divider ng-if="!$last"></md-divider>
-    </md-item>
-  </md-list>
+<md-list>
+  <md-item ng-repeat="item in vm.activity">
+    <md-item-content>
+      <h4>{{ item }}</h4>
+    </md-item-content>
+    <md-divider ng-if="!$last"></md-divider>
+  </md-item>
+</md-list>

@@ -1,0 +1,20 @@
+.md-toolbar-tools-bottom div {
+  font-size: em(14);
+
+  &:last-child {
+    font-size: em(12);
+    opacity: 0.8;
+  }
+}
+
+md-sidenav {
+  fill: #737373;
+  ng-md-icon {
+    position: relative;
+    top: 5px; // adjust for svg viewbox
+  }
+}
+
+.md-sidenav-left md-toolbar {
+  background-color: $sidenav-background-color;
+}
