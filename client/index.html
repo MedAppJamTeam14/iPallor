@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html ng-app="ipallor" lang="en">
+  <head>
+    <title>ipallor</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"              content="width=device-width, initial-scale=1">
+    <meta name="description"           content="static portfolio">
+    <meta name="author"                content="Van Nguyen">
+    <meta name='og:title'              content='Van personal website'>
+    <meta name='og:description'        content="Van personal website">
+    <meta name='og:site_name'          content='Van Nguyen'>
+    <meta name='og:type'               content='website'>
+
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <base href="/">
+
+    <!-- build:css app.css -->
+
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
+    <!-- endinject -->
+
+    <link rel="stylesheet" href="styles/css/app.css">
+
+    <!-- endbuild -->
+
+  </head>
+  <body layout="column">
+    <topbar></topbar>
+
+    <div layout="row" flex>
+      <sidenav></sidenav>
+      <div layout="column" id="content" flex>
+        <md-content layout="column" class="md-padding" flex>
+          <div ng-view></div>
+        </md-content>
+      </div>
+    </div>
+
+    <!-- build:js app.js -->
+
+    <!-- bower:js -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.js"></script>
+    <script src="bower_components/angular-material/angular-material.js"></script>
+    <!-- endinject -->
+
+    <!-- inject:js -->
+    <script src="app.js"></script>
+    <script src="views/home/home.js"></script>
+    <script src="views/home/home.controller.js"></script>
+    <script src="views/clinician/clinician.js"></script>
+    <script src="views/clinician/clinician.controller.js"></script>
+    <script src="directives/topbar/topbar.directive.js"></script>
+    <script src="directives/sidenav/sidenav.directive.js"></script>
+    <!-- endinject -->
+
+    <!-- endbuild -->
+
+  </body>
+</html>
