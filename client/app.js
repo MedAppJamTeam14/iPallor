@@ -35,7 +35,7 @@ angular.module('ipallor', [
       },
       {
         link: '/clinician',
-        title: 'clinican',
+        title: 'Clinician',
         icon: 'group'
       },
       {
@@ -119,6 +119,14 @@ angular.module('ipallor', [
       $location.path('/');
     };
 
-    $rootScope.user = {};
+    $rootScope.user = {
+      firstName: 'Van',
+      lastName: 'Nguyen',
+      email: 'vnguyen94@gmail.com',
+      age: 25,
+      city: 'Irvine',
+      state: 'CA',
+      gender: 'M'
+    };
 
   });
