@@ -19,9 +19,9 @@ module.exports = function (config) {
     },
 
     plugins: [
-      'karma-phantomjs-launcher',
       'karma-jasmine',
-      'karma-ng-html2js-preprocessor'
+      'karma-ng-html2js-preprocessor',
+      'karma-phantomjs-launcher'
     ],
 
     files: require('main-bower-files')({

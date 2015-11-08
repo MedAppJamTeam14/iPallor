@@ -43,7 +43,7 @@
         <md-item ng-repeat="item in loggedInMenuItems" layout="row">
           <md-button
             ng-click="navigate(item.link)"
-            ng-disabled="item.title !=='Login' && !user.email">
+            ng-disabled="item.title !== 'Login' && !user.email">
             {{ item.title }}
           </md-button>
         </md-item>
@@ -90,10 +90,10 @@
     <script src="views/upload/upload.controller.js"></script>
     <script src="views/signup/signup.js"></script>
     <script src="views/signup/signup.controller.js"></script>
-    <script src="views/clinician/clinician.js"></script>
-    <script src="views/clinician/clinician.controller.js"></script>
     <script src="views/home/home.js"></script>
     <script src="views/home/home.controller.js"></script>
+    <script src="views/clinician/clinician.js"></script>
+    <script src="views/clinician/clinician.controller.js"></script>
     <script src="directives/topbar/topbar.directive.js"></script>
     <script src="directives/sidenav/sidenav.directive.js"></script>
     <!-- endinject -->

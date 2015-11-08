@@ -13,7 +13,7 @@ describe('Directive: topbar', function () {
     scope.$apply();
   }));
 
-  it('should ...', function () {
-    expect(1).toBe(1);
-  });
+  // it('should ...', function () {
+  //   expect(1).toBe(1);
+  // });
 });

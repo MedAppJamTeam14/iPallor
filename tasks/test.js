@@ -8,7 +8,7 @@ var gulp       = require('gulp');
 var util       = require('gulp-util');
 var chalk      = require('chalk');
 var protractor = require('gulp-protractor');
-var karma      = require('karma').server;
+var Server     = require('karma').Server;
 var plumber    = require('gulp-plumber');
 var mocha      = require('gulp-mocha');
 
@@ -54,9 +54,9 @@ function testClient (done) {
 
   log('Running client tests...', { padding: true });
 
-  karma.start({
+  new Server({
     configFile: __dirname + '/../karma.conf.js'
-  }, done);
+  }, done).start();
 }
 
 exports.test = function (done) {
