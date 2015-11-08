@@ -22,6 +22,27 @@ angular.module('ipallor', [
       $mdSidenav(menuId).toggle();
     };
 
+    $rootScope.isActive = function (route) {
+      return route === $location.path();
+    };
+
+    $rootScope.navigate = function (link) {
+      $location.path(link);
+
+      if ($mdSidenav('left').isOpen()) {
+        $rootScope.toggleSidenav('left');
+      }
+    };
+
+    $rootScope.login = function () {
+      $location.path('/');
+    };
+
+    $rootScope.logout = function () {
+      $rootScope.user = {};
+      $location.path('/');
+    };
+
     $rootScope.loggedInMenuItems = [
       {
         link: '/',
@@ -101,23 +122,6 @@ angular.module('ipallor', [
         gender: 'M'
       }
     ];
-
-    $rootScope.navigate = function (link) {
-      $location.path(link);
-
-      if ($mdSidenav('left').isOpen()) {
-        $rootScope.toggleSidenav('left');
-      }
-    };
-
-    $rootScope.login = function () {
-      $location.path('/');
-    };
-
-    $rootScope.logout = function () {
-      $rootScope.user = {};
-      $location.path('/');
-    };
 
     $rootScope.user = {
       firstName: 'Van',

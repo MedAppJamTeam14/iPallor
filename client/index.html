@@ -43,8 +43,20 @@
         <md-item ng-repeat="item in loggedInMenuItems" layout="row">
           <md-button
             ng-click="navigate(item.link)"
+            ng-class="{ active:isActive(item.link) }"
             ng-disabled="item.title !== 'Login' && !user.email">
             {{ item.title }}
+          </md-button>
+        </md-item>
+        <md-divider></md-divider>
+        <md-item>
+          <md-button ng-click="navigate('/about')">
+            About
+          </md-button>
+        </md-item>
+        <md-item>
+          <md-button ng-href="https://github.com/MedAppJamTeam14/iPallor" target="_blank">
+            Github
           </md-button>
         </md-item>
       </md-list>
@@ -94,6 +106,8 @@
     <script src="views/home/home.controller.js"></script>
     <script src="views/clinician/clinician.js"></script>
     <script src="views/clinician/clinician.controller.js"></script>
+    <script src="views/about/about.js"></script>
+    <script src="views/about/about.controller.js"></script>
     <script src="directives/topbar/topbar.directive.js"></script>
     <script src="directives/sidenav/sidenav.directive.js"></script>
     <!-- endinject -->
