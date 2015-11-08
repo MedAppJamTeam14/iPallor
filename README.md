@@ -16,6 +16,6 @@
   * `gulp` - run gulp and start server
   * `gulp build` - build dist version of app (concatenate + minify)
   * `gulp lint` - lint with JSHint and JSCS
-  * `gulp test` - test with Karma and Mocha
-  * `gulp e2e` - test with Protractor
+  * `gulp test` - test with Karma and Mocha (unit-testing)
+  * `gulp e2e` - test with Protractor (end-to-end testing)
   * `gulp bump [--major || --minor || --patch]` - bump version
