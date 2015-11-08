@@ -5,7 +5,5 @@
 
 .ng-enter {
   opacity: 0;
-  animation: fadeIn ease-in 1;
-  animation-fill-mode: forwards;
-  animation-duration: 0.2s;
+  animation: fadeIn ease-in 0.15s;
 }
