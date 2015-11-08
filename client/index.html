@@ -41,7 +41,9 @@
       </md-toolbar>
       <md-list>
         <md-item ng-repeat="item in loggedInMenuItems" layout="row">
-          <md-button ng-click="navigate(item.link)">
+          <md-button
+            ng-click="navigate(item.link)"
+            ng-disabled="item.title !=='Login' && !user.email">
             {{ item.title }}
           </md-button>
         </md-item>
@@ -84,10 +86,10 @@
     <script src="app.js"></script>
     <script src="views/wolfram/wolfram.js"></script>
     <script src="views/wolfram/wolfram.controller.js"></script>
-    <script src="views/upload/upload.js"></script>
-    <script src="views/upload/upload.controller.js"></script>
     <script src="views/signup/signup.js"></script>
     <script src="views/signup/signup.controller.js"></script>
+    <script src="views/upload/upload.js"></script>
+    <script src="views/upload/upload.controller.js"></script>
     <script src="views/home/home.js"></script>
     <script src="views/home/home.controller.js"></script>
     <script src="views/clinician/clinician.js"></script>

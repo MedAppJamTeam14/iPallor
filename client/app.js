@@ -25,7 +25,7 @@ angular.module('ipallor', [
     $rootScope.loggedInMenuItems = [
       {
         link: '/',
-        title: 'Home',
+        title: 'Login',
         icon: 'dashboard'
       },
       {
@@ -46,36 +46,36 @@ angular.module('ipallor', [
     ];
 
     $rootScope.users = [
-        {
-          firstName: 'Van',
-          lastName: 'Nguyen',
-          email: 'vnguyen94@gmail.com',
-          age: 25,
-          city: 'Irvine',
-          state: 'CA',
-          gender: 'M'
-        },
-        {
-          firstName: 'Max',
-          lastName: 'Paulus',
-          email: 'paulusm@uci.edu',
-          age: 25,
-          city: 'Irvine',
-          state: 'CA',
-          gender: 'M'
-        },
-        {
-          firstName: 'John',
-          lastName: 'Collins',
-          email: 'jfcollin@uci.edu',
-          age: 25,
-          city: 'Irvine',
-          state: 'CA',
-          gender: 'M'
-        },
-        {
-          firstName: 'Matin',
-          lastName: 'Khoshnevis',
+      {
+        firstName: 'Van',
+        lastName: 'Nguyen',
+        email: 'vnguyen94@gmail.com',
+        age: 25,
+        city: 'Irvine',
+        state: 'CA',
+        gender: 'M'
+      },
+      {
+        firstName: 'Max',
+        lastName: 'Paulus',
+        email: 'paulusm@uci.edu',
+        age: 25,
+        city: 'Irvine',
+        state: 'CA',
+        gender: 'M'
+      },
+      {
+        firstName: 'John',
+        lastName: 'Collins',
+        email: 'jfcollin@uci.edu',
+        age: 25,
+        city: 'Irvine',
+        state: 'CA',
+        gender: 'M'
+      },
+      {
+        firstName: 'Matin',
+        lastName: 'Khoshnevis',
         email: 'ge0matin@gmail.com',
         age: 25,
         city: 'Irvine',

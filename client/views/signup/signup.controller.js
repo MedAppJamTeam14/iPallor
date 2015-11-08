@@ -16,6 +16,10 @@ angular.module('ipallor')
         $location.path('/upload');
       },
 
+      cancelSignup: function () {
+        $location.path('/');
+      },
+
       signupState: {
         firstName: '',
         lastName: '',
@@ -27,9 +31,10 @@ angular.module('ipallor')
       },
 
       states: (
-        'AL AK AZ AR CA CO CT DE FL GA HI IA ID IL IN KS KY ' +
-        'LA MA MD ME MI MN MO MS MT NE NH NJ NM NV NY NC ND ' +
-        'OH OK OR PA RI SC SD TN TX UT VA VT WA WI WV WY').split(' '),
+        'AL AK AZ AR CA CO CT DE FL GA HI IA ID IL IN KS KY '
+        + 'LA MA MD ME MI MN MO MS MT NE NH NJ NM NV NY NC ND '
+        + 'OH OK OR PA RI SC SD TN TX UT VA VT WA WI WV WY'
+        ).split(' '),
 
       gender: ['Male', 'Female']
     });
