@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('ipallor')
-  .controller('SignupCtrl', function ($rootScope, $location) {
+  .controller('SignupCtrl', function ($rootScope, $location, UserFactory) {
 
     var vm = this;
 
@@ -10,8 +10,8 @@ angular.module('ipallor')
 
       signup: function () {
         var newUser = vm.signupState;
-        $rootScope.users.push(newUser);
-        $rootScope.user = newUser;
+        UserFactory.users.push(newUser);
+        UserFactory.user = newUser;
 
         $location.path('/upload');
       },

@@ -1,7 +1,7 @@
 <h2>Login</h2>
 
 <md-list class="list-login">
-  <md-item ng-repeat="user in users">
+  <md-item ng-repeat="user in vm.users">
     <md-button ng-click="vm.login(user)">
       <p>{{ user.firstName + ' ' + user.lastName }}</p>
     </md-button>

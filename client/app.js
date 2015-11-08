@@ -16,121 +16,60 @@ angular.module('ipallor', [
     $locationProvider.html5Mode(true);
 
   })
-  .run(function ($rootScope, $location, $mdSidenav) {
+  .run(function ($rootScope, $location, $mdSidenav, UserFactory) {
 
-    $rootScope.toggleSidenav = function (menuId) {
-      $mdSidenav(menuId).toggle();
-    };
-
-    $rootScope.isActive = function (route) {
-      return route === $location.path();
-    };
-
-    $rootScope.navigate = function (link) {
-      $location.path(link);
-
-      if ($mdSidenav('left').isOpen()) {
-        $rootScope.toggleSidenav('left');
-      }
-    };
-
-    $rootScope.login = function () {
-      $location.path('/');
-    };
-
-    $rootScope.logout = function () {
-      $rootScope.user = {};
-      $location.path('/');
-    };
-
-    $rootScope.loggedInMenuItems = [
-      {
-        link: '/',
-        title: 'Login',
-        icon: 'dashboard'
+    angular.extend($rootScope, {
+      toggleSidenav: function (menuId) {
+        $mdSidenav(menuId).toggle();
       },
-      {
-        link: '/upload',
-        title: 'Upload image',
-        icon: 'dashboard'
-      },
-      {
-        link: '/clinician',
-        title: 'Clinician',
-        icon: 'group'
-      },
-      {
-        link: '/wolfram',
-        title: 'Wolfram API request/response',
-        icon: 'message'
-      }
-    ];
 
-    $rootScope.users = [
-      {
-        firstName: 'Van',
-        lastName: 'Nguyen',
-        email: 'vnguyen94@gmail.com',
-        age: 25,
-        city: 'Irvine',
-        state: 'CA',
-        gender: 'M'
+      isActive: function (route) {
+        return route === $location.path();
       },
-      {
-        firstName: 'Max',
-        lastName: 'Paulus',
-        email: 'paulusm@uci.edu',
-        age: 25,
-        city: 'Irvine',
-        state: 'CA',
-        gender: 'M'
-      },
-      {
-        firstName: 'John',
-        lastName: 'Collins',
-        email: 'jfcollin@uci.edu',
-        age: 25,
-        city: 'Irvine',
-        state: 'CA',
-        gender: 'M'
-      },
-      {
-        firstName: 'Matin',
-        lastName: 'Khoshnevis',
-        email: 'ge0matin@gmail.com',
-        age: 25,
-        city: 'Irvine',
-        state: 'CA',
-        gender: 'M'
-      },
-      {
-        firstName: 'Pasha',
-        lastName: 'Khosravi',
-        email: 'Pashak@uci.edu',
-        age: 25,
-        city: 'Irvine',
-        state: 'CA',
-        gender: 'M'
-      },
-      {
-        firstName: 'Lewis',
-        lastName: 'Liu',
-        email: 'yuxuanl3@uci.edu',
-        age: 25,
-        city: 'Irvine',
-        state: 'CA',
-        gender: 'M'
-      }
-    ];
 
-    $rootScope.user = {
-      firstName: 'Van',
-      lastName: 'Nguyen',
-      email: 'vnguyen94@gmail.com',
-      age: 25,
-      city: 'Irvine',
-      state: 'CA',
-      gender: 'M'
-    };
+      navigate: function (link) {
+        $location.path(link);
+
+        if ($mdSidenav('left').isOpen()) {
+          $rootScope.toggleSidenav('left');
+        }
+      },
+
+      getCurrentUser: function () {
+        return UserFactory.getUser();
+      },
+
+      logout: function () {
+        UserFactory.logout();
+        $location.path('/');
+      },
+
+      menuItems: [
+        {
+          link: '/',
+          title: 'Login',
+          icon: 'dashboard',
+          disabledIfLoggedOut: false
+        },
+        {
+          link: '/upload',
+          title: 'Upload image',
+          icon: 'dashboard',
+          disabledIfLoggedOut: true
+        },
+        {
+          link: '/clinician',
+          title: 'Clinician',
+          icon: 'group',
+          disabledIfLoggedOut: true
+        },
+        {
+          link: '/wolfram',
+          title: 'Wolfram API request/response',
+          icon: 'message',
+          disabledIfLoggedOut: true
+        }
+      ]
+    });
 
   });
