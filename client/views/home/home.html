@@ -1,10 +1,15 @@
 <h2>Login</h2>
 
 <md-list class="list-login">
-  <md-item ng-repeat="user in vm.users">
+  <md-item ng-repeat="user in users">
     <md-button ng-click="vm.login(user)">
-      <p>{{ user.name }}</p>
+      <p>{{ user.firstName + ' ' + user.lastName }}</p>
     </md-button>
-    <md-divider ng-if="!$last"></md-divider>
+    <md-divider></md-divider>
+  </md-item>
+  <md-item class="list-login-signup">
+    <md-button ng-click="vm.signup()">
+      <p>Signup</p>
+    </md-button>
   </md-item>
 </md-list>

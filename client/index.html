@@ -31,11 +31,11 @@
     <md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
       <md-toolbar class="md-tall md-sidenav">
         <span flex></span>
-        <div ng-if="user.name" layout="column" class="md-toolbar-tools-bottom inset">
-          <div>{{ user.name }}</div>
+        <div ng-if="user.email" layout="column" class="md-toolbar-tools-bottom inset">
+          <div>{{ user.firstName + ' ' + user.lastName }}</div>
           <div>{{ user.email }}</div>
         </div>
-        <div ng-if="!user.name" layout="column" class="md-toolbar-tools-bottom inset">
+        <div ng-if="!user.email" layout="column" class="md-toolbar-tools-bottom inset">
           <div>Not Logged in</div>
         </div>
       </md-toolbar>
@@ -57,7 +57,7 @@
           </md-button>
           <h3>iPallor</h3>
           <span flex></span>
-          <md-button ng-if="user.name" ng-click="logout()" aria-label="Logout">
+          <md-button ng-if="user.email" ng-click="logout()" aria-label="Logout">
             Logout
           </md-button>
         </div>
@@ -86,6 +86,8 @@
     <script src="views/wolfram/wolfram.controller.js"></script>
     <script src="views/upload/upload.js"></script>
     <script src="views/upload/upload.controller.js"></script>
+    <script src="views/signup/signup.js"></script>
+    <script src="views/signup/signup.controller.js"></script>
     <script src="views/home/home.js"></script>
     <script src="views/home/home.controller.js"></script>
     <script src="views/clinician/clinician.js"></script>

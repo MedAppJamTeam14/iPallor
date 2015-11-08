@@ -3,7 +3,9 @@
 angular.module('ipallor')
   .controller('UploadCtrl', function () {
 
-    angular.extend(this, {
+    var vm = this;
+
+    angular.extend(vm, {
       name: 'UploadCtrl'
     });
 

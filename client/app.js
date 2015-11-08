@@ -45,6 +45,63 @@ angular.module('ipallor', [
       }
     ];
 
+    $rootScope.users = [
+        {
+          firstName: 'Van',
+          lastName: 'Nguyen',
+          email: 'vnguyen94@gmail.com',
+          age: 25,
+          city: 'Irvine',
+          state: 'CA',
+          gender: 'M'
+        },
+        {
+          firstName: 'Max',
+          lastName: 'Paulus',
+          email: 'paulusm@uci.edu',
+          age: 25,
+          city: 'Irvine',
+          state: 'CA',
+          gender: 'M'
+        },
+        {
+          firstName: 'John',
+          lastName: 'Collins',
+          email: 'jfcollin@uci.edu',
+          age: 25,
+          city: 'Irvine',
+          state: 'CA',
+          gender: 'M'
+        },
+        {
+          firstName: 'Matin',
+          lastName: 'Khoshnevis',
+        email: 'ge0matin@gmail.com',
+        age: 25,
+        city: 'Irvine',
+        state: 'CA',
+        gender: 'M'
+      },
+      {
+        firstName: 'Pasha',
+        lastName: 'Khosravi',
+        email: 'Pashak@uci.edu',
+        age: 25,
+        city: 'Irvine',
+        state: 'CA',
+        gender: 'M'
+      },
+      {
+        firstName: 'Lewis',
+        lastName: 'Liu',
+        email: 'yuxuanl3@uci.edu',
+        age: 25,
+        city: 'Irvine',
+        state: 'CA',
+        gender: 'M'
+      }
+    ];
+
     $rootScope.navigate = function (link) {
       $location.path(link);
 

@@ -3,7 +3,9 @@
 angular.module('ipallor')
   .controller('WolframCtrl', function () {
 
-    angular.extend(this, {
+    var vm = this;
+
+    angular.extend(vm, {
       name: 'WolframCtrl'
     });
 

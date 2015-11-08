@@ -14,7 +14,7 @@
 
 ## Commands
   * `gulp` - run gulp and start server
-  * `build` - build dist version of app (concatenate + minify)
+  * `gulp build` - build dist version of app (concatenate + minify)
   * `gulp lint` - lint with JSHint and JSCS
   * `gulp test` - test with Karma and Mocha
   * `gulp e2e` - test with Protractor
