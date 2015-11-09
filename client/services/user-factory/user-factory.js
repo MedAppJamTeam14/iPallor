@@ -75,6 +75,10 @@ angular.module('ipallor')
         fac.user = {};
       },
 
+      addUser: function(user) {
+        fac.users.push(user);
+      },
+
       getUser: function () {
         return fac.user;
       }

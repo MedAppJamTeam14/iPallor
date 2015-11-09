@@ -10,8 +10,8 @@ angular.module('ipallor')
 
       signup: function () {
         var newUser = vm.signupState;
-        UserFactory.users.push(newUser);
-        UserFactory.user = newUser;
+        UserFactory.addUser(newUser);
+        UserFactory.login(newUser);
 
         $location.path('/upload');
       },
